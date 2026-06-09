@@ -5,4 +5,16 @@ h1 {
 p {
     color: #333333;
     font-size: 18px;
-} 
+}
+
+h2 {
+    color: maroon;
+    border-bottom: 2px solid maroon;
+    padding-bottom: 5px;
+}
+
+li {
+    color: #444444;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
