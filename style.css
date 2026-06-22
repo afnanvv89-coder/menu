@@ -1,20 +1,309 @@
-h1 {
-    color: maroon;
+/* التنسيق العام للصفحة والخلفية */
+body {
+    background-color: #fcfbf7; /* لون بيج كريمي دافئ مطابق للصورة */
+    color: #2d4a22; /* اللون الزيتي الفخم */
+    font-family: 'Montserrat', 'Cairo', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px;
 }
 
-p {
-    color: #333333;
+/* شعار محشو بحبنا */
+.slogan {
     font-size: 18px;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 30px;
 }
 
+/* عنوان القسم الرئيسي */
 h2 {
-    color: maroon;
-    border-bottom: 2px solid maroon;
-    padding-bottom: 5px;
+    color: #2d4a22;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
-li {
-    color: #444444;
+/* تنسيق أقسام المنيو */
+.menu-section {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 25px;
+    background-color: #ffffff; /* خلفية بيضاء خفيفة لكل قسم لجعلها بارزة */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.menu-section h3 {
+    background-color: #2d4a22;
+    color: #fcfbf7;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 0;
     font-size: 18px;
-    margin-bottom: 10px;
+}
+
+/* تنسيق الجداول لتصبح مثل التصميم */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px dashed #2d4a22; /* خطوط منقطة أنيقة بين الأسطر */
+}
+
+th {
+    font-weight: bold;
+    color: #2d4a22;
+    border-bottom: 2px solid #2d4a22;
+}
+
+/* تنسيق الأطباق الجانبية بجانب بعضها */
+.side-dishes {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.dish-box {
+    flex: 1;
+    background-color: #fcfbf7;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #2d4a22;
+}
+
+.dish-box h4 {
+    margin-top: 0;
+    color: #2d4a22;
+}
+
+/* النص السفلي */
+.footer-text {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* --- تنسيق أزرار السوشيال ميديا الجديد --- */
+.social-container {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.social-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px; /* زوايا دائرية ناعمة للازرار */
+    transition: all 0.3s ease;
+    font-size: 16px;
+    border: 2px solid #2d4a22;
+}
+
+/* أزرار الحسابات باللون الزيتي الفخم والكتابة بالبيج */
+.instagram-btn, .tiktok-btn, .whatsapp-btn {
+    background-color: #2d4a22;
+    color: #fcfbf7;
+}
+
+/* حركة تفاعلية عند تمرير الماوس فوق الأزرار */
+.btn:hover {
+    background-color: #fcfbf7;
+    color: #2d4a22;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 74, 34, 0.15);
+}/* تنسيقات خاصة لشاشات الجوال والأجهزة الصغيرة */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* تقليل المسافات الجانبية لتوفير مساحة */
+    }
+
+    /* جعل الأطباق الجانبية تترتب تحت بعض بدل جنب بعض */
+    .side-dishes {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* تكبير نصوص الجداول قليلاً لتكون واضحة ومريحة للقراءة على الجوال */
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    /* جعل أزرار السوشيال ميديا متناسقة مع عرض شاشة الجوال */
+    .btn {
+        font-size: 15px;
+        padding: 10px;
+    }
+}/* تنسيقات خاصة لشاشات الجوال والأجهزة الصغيرة */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    /* هذا السطر السحري سيرتب جداول البطاطس والبصل تحت بعض تلقائياً */
+    .side-dishes {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* جعل عرض كل جدول مناسباً تماماً للشاشة */
+    .side-dishes table {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .side-dishes {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* استهداف الكلاس الجديد للجدول لضمان نزوله تحت الآخر */
+    .side-table {
+        width: 100% !important;
+        max-width: 300px;
+        display: table !important;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}/* تنسيق قسم الحسابات الافتراضي */
+.footer-section {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #2d4a22;
+    margin-bottom: 5px;
+}
+
+.follow-notice {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #2d4a22;
+    border-radius: 25px; /* تجعل الأزرار دائرية وجميلة */
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e3316;
+}/* تنسيق قسم الحسابات الافتراضي */
+.footer-section {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #2d4a22;
+    margin-bottom: 5px;
+}
+
+.follow-notice {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #2d4a22;
+    border-radius: 25px; /* تجعل الأزرار دائرية وجميلة */
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e3316;
+}/* إجبار جداول الأطباق الجانبية على النزول تحت بعضها في الموبايل */
+.side-dishes {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important; /* مسافة مريحة بين الجدولين */
+    align-items: center !important;
+}
+
+.side-table {
+    width: 100% !important; /* الجدول يأخذ كامل عرض الحاوية */
+    max-width: 350px !important;
+}
+}
+}
+}
 }
